@@ -45,8 +45,8 @@ export default async function createClass(req: Request, res: Response): Promise<
         res.status(201)
             .send({ message: "Turma criada com sucesso" })
 
-    } catch (error) {
+    } catch (error: any) {
         res.status(errorCode)
-            .send({ message: error.message })
+            .send({ message: error.message})
     }
 }
